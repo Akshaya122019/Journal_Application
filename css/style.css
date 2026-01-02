@@ -186,3 +186,193 @@ body {
     height: 40px;
     background-color: #000;
 }
+
+/* Footer */
+footer {
+    background-color: #002d54;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+footer h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    color: white;
+}
+
+/* Carousel */
+.carousel-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-carousel .item {
+    padding: 15px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-card-img {
+    transform: scale(1.1);
+}
+
+.feature-card-img-wrapper {
+    overflow: hidden;
+    height: 220px;
+}
+
+.feature-card-body {
+    padding: 1.5rem;
+}
+
+.feature-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card-text {
+    color: #718096;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.feature-card-btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.feature-card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Feature Carousel Custom Styling */
+.feature-carousel {
+    position: relative;
+}
+
+.feature-carousel.owl-theme .owl-nav {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    pointer-events: none;
+}
+
+.feature-carousel.owl-theme .owl-nav [class*='owl-'] {
+    background: white;
+    color: #667eea;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    pointer-events: all;
+}
+
+.feature-carousel.owl-theme .owl-nav .owl-prev {
+    left: -25px;
+}
+
+.feature-carousel.owl-theme .owl-nav .owl-next {
+    right: -25px;
+}
+
+.feature-carousel.owl-theme .owl-nav [class*='owl-']:hover {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.feature-carousel.owl-theme .owl-dots {
+    margin-top: 30px;
+}
+
+.feature-carousel.owl-theme .owl-dots .owl-dot span {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.feature-carousel.owl-theme .owl-dots .owl-dot.active span,
+.feature-carousel.owl-theme .owl-dots .owl-dot:hover span {
+    background: white;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-section-title {
+        font-size: 2rem;
+    }
+}
