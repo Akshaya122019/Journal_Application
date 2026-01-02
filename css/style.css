@@ -4,6 +4,14 @@ body {
     background-color: #fff;
     overflow-x: hidden;
 }
+body.no-scroll {
+    overflow: hidden;
+}
+body.no-scroll {
+    position: fixed;
+    width: 100%;
+}
+
 .fss{
     font-size: 14px;
     word-spacing: 0.2em;
