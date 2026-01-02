@@ -4,6 +4,19 @@ body {
     background-color: #fff;
     overflow-x: hidden;
 }
+.fss{
+    font-size: 14px;
+    word-spacing: 0.2em;
+}
+ul li,
+ol li {
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+#stickyNav {
+    transition: all 0.3s ease;
+}
+
 
 /* --- Header Styles --- */
 .navbar-top {
@@ -140,17 +153,56 @@ body {
 
 #sidePopup {
     position: fixed;
-    top: 0;
-    right: -450px;
-    width: 450px;
-    height: 100%;
-    background: #ffffff;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-    transition: right 0.4s ease;
+    background: #fff;
     z-index: 1050;
-    padding: 20px;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* 🔑 key */
+    transition: all 0.4s ease;
 }
+
+/* Header stays visible */
+.popup-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Body scrolls */
+.popup-body {
+    padding: 15px;
+    overflow-y: auto;
+    flex: 1; /* 🔑 key */
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    #sidePopup {
+        top: 0;
+        right: -450px;
+        width: 450px;
+        height: 100%;
+    }
+    #sidePopup.active {
+        right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #sidePopup {
+        left: 0;
+        bottom: -100%;
+        width: 100%;
+        height: 90vh; /* 🔑 use viewport height */
+        border-radius: 16px 16px 0 0;
+    }
+    #sidePopup.active {
+        bottom: 0;
+    }
+}
+
 
 #sidePopup.active {
     right: 0;

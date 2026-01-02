@@ -20,14 +20,31 @@
 
     <nav class="navbar navbar-top bg-white">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Elsevier_Logo.svg/1200px-Elsevier_Logo.svg.png"
-                    height="24" alt="Logo">
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                <img src="images/logo.png" height="50" alt="Logo"> Nethrax Publisher
             </a>
             <div class="d-flex align-items-center">
                 <span class="me-3 small d-none d-sm-inline">Sign in</span>
                 <button class="btn btn-outline-dark btn-sm">Register</button>
             </div>
+        </div>
+    </nav>
+
+
+    <!-- Sticky Navbar (Hidden Initially) -->
+    <nav id="stickyNav" class="navbar navbar-expand-lg fixed-top d-none" style="background-color: #002d54;">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-md-10 p-2">
+                    <a class="navbar-brand text-white" href="#">Journal of Soft Computing & Explainable Intelligence</a>
+                </div>
+                <div class="col-md-2">
+                    <a class="navbar-brand text-white btn btn-dark " href="#">Submit Your Article</a>
+                </div>
+            </div>
+
+
+
         </div>
     </nav>
 
@@ -39,18 +56,17 @@
                 </div>
                 <div class="col-lg-10 col-md-9">
                     <h1 class="fw-bold mb-2">Journal of Soft Computing & Explainable Intelligence</h1>
-                    <p class="lead mb-4">A Leading Global Platform for Innovation in Soft Computing</p>
                     <div class="d-flex align-items-center cite-score-box">
-                        <span class="me-3"><strong>20.5</strong> CiteScore</span>
+                        <span class="me-3"><strong>-</strong> CiteScore</span>
                         <span class="me-3">|</span>
-                        <span><strong>7.8</strong> Impact Factor</span>
+                        <span><strong>-</strong> Impact Factor</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg journal-nav p-0">
+    <nav class="navbar navbar-expand-lg journal-nav p-0 sticky-top" id="secondaryNav" style="top:56px;">
         <div class="container px-0 px-lg-3">
             <div class="d-flex w-100 d-lg-none justify-content-between align-items-center px-3 py-2">
                 <span class="fw-bold small">JOURNAL MENU</span>
@@ -109,7 +125,8 @@
                     </li>
 
                     <li class="nav-item d-none d-lg-block">
-                        <a href="#" class="nav-link text-nowrap">Submit article <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="#" class="nav-link text-nowrap">Guide for authors<i
+                                class="bi bi-arrow-up-right"></i></a>
                     </li>
 
                     <li class="d-lg-none">
@@ -127,10 +144,10 @@
             <div class="col-md-7 p-5" style="background-color: #f5f5f5;">
                 <div class="abt-con">
                     <h2 class="fs-4">About the Journal</h2>
-                    <p>The Official Journal of the World Federation on Soft Computing (WFSC)
-                        http://www.softcomputing.org Applied Soft Computing is an international journal promoting an
-                        integrated view of soft computing to solve real life problems. Soft computing is a collection of
-                        methodologies, which aim to exploit …</p>
+                    <p>Journal of Soft Computing & Explainable Intelligence is an international peer-reviewed journal
+                        that promotes an integrated and transparent approach to soft computing for solving real-world
+                        problems. The journal emphasizes the development of intelligent systems that are not only
+                        effective but also interpretable and explainable....</p>
                     <button id="openPopup" class="border-0 popup text-primary">
                         View Aims & Scope
                     </button>
@@ -141,7 +158,7 @@
                     <h2 class="fs-4">Article publishing options</h2>
                     <h3 class="">Open Access</h3>
                     <p class="fs-6 text-muted">
-                        Article Publishing Charge (APC): USD 3,560 (excluding taxes).<br>
+                        Article Publishing Charge (APC): USD - (excluding taxes).<br>
                         The amount you pay may be reduced during submission if applicable.
                     </p>
                     <a href="#" class="text-primary text-decoration-none small fw-bold">Review this journal's open
@@ -155,62 +172,63 @@
     <div id="overlay"></div>
 
     <!-- Side Popup -->
-    <div id="sidePopup">
-        <button class="btn btn-sm btn-danger float-right" id="closePopup">✕</button>
+<div id="sidePopup">
 
-        <h4>Aims & Scope</h4>
-        <hr>
+    <!-- HEADER (fixed inside popup) -->
+    <div class="popup-header">
+        <h4 class="mb-0">Aims & Scope</h4>
+        <button class="btn btn-sm btn-danger" id="closePopup">✕</button>
+    </div>
 
-        <p class="lh-lg">
+    <!-- BODY (scrollable content) -->
+    <div class="popup-body">
+
+        <p class="lh-lg fss">
             This journal is an international forum dedicated to the advancement and application of soft computing
             techniques for addressing complex real-world problems. It promotes an integrated and interdisciplinary
             perspective that brings together diverse methodologies within the soft computing paradigm.
         </p>
-        <p class="lh-lg">
+
+        <p class="lh-lg fss">
             Soft computing comprises a collection of computational approaches that leverage tolerance for imprecision,
-            uncertainty, and partial truth to achieve robust, adaptable, and cost-effective solutions. The journal
-            emphasizes high-quality research that explores both theoretical developments and practical implementations
-            of intelligent systems.
-        </p>
-        <p class="lh-lg">
-            The scope includes original contributions in the application, advancement, and convergence of <b>IOT & Smart
-                System, Fuzzy, Decision Supporting and National Language Processing</b>
-            techniques. Particular attention is given to innovative solutions that demonstrate real-world relevance
-            across engineering, science, industry, and emerging technologies.
+            uncertainty, and partial truth to achieve robust, adaptable, and cost-effective solutions.
         </p>
 
-        <p class="lh-lg">
-            The journal follows a <b>continuous (rolling) publication model,</b> enabling rapid online publication of
-            articles
-            immediately after final acceptance. This approach ensures timely dissemination of research and frequent
-            updates with newly accepted work.
+        <p class="lh-lg fss">
+            The scope includes original contributions in the application, advancement, and convergence of
+            <b>IOT & Smart System, Fuzzy, Decision Supporting and Natural Language Processing</b> techniques.
         </p>
-        <p class="lh-lg">Major Topics:</p>
-        <p class="lh-lg">The scope of this journal covers the following soft computing and related techniques,
-            interactions between several soft computing techniques, and their industrial applications:</p>
-        <ul class="lh-lg">
-            <li>Explainability in fuzzy/soft systems or evolutionary methods</li>
+
+        <p class="lh-lg fss">
+            The journal follows a <b>continuous (rolling) publication model</b>, enabling rapid online publication.
+        </p>
+
+        <p class="lh-lg fss">Major Topics:</p>
+
+        <ul class="fss">
+            <li>Explainability in fuzzy / soft systems</li>
             <li>Machine and Deep Learning</li>
             <li>Control Systems</li>
             <li>Decision Support Systems</li>
             <li>Fuzzy Computing</li>
             <li>Healthcare Research</li>
-            <li>oT &Smart Systems</li>
-            <li>Pattern Recognition</li>
+            <li>IoT & Smart Systems</li>
             <li>Natural Language Processing (NLP)</li>
-            <li>Smart Cities & IoT</li>
+            <li>Smart Cities</li>
             <li>Supply Chain & Logistics</li>
             <li>Agricultural Robotics</li>
             <li>Human-Machine Interface</li>
             <li>Software Engineering</li>
-            <li>Signal or Image Processing</li>
+            <li>Signal / Image Processing</li>
         </ul>
 
-        <p class="lh-lg">
-            Authors are welcome to submit letters promoting original soft computing research to Applied Soft Computing's
-            open access companion title, Systems and Soft Computing.
+        <p class="lh-lg fss">
+            Authors are welcome to submit original research to the journal.
         </p>
+
     </div>
+</div>
+
 
     <div class="carousel-section-container pt-5">
         <h2 class="fs-4 p-3">Related Journals</h2>
@@ -408,6 +426,18 @@
             });
         });
     </script>
+    <script>
+        const stickyNav = document.getElementById("stickyNav");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 150) {
+                stickyNav.classList.remove("d-none");
+            } else {
+                stickyNav.classList.add("d-none");
+            }
+        });
+    </script>
+
     <script>
         $(document).ready(function () {
 
