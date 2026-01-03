@@ -19,10 +19,13 @@ body.no-scroll {
     word-spacing: 0.2em;
 }
 
-ul li,
+.pop-list li,
 ol li {
     line-height: 1.8;
     margin-bottom: 14px;
+}
+.search-input{
+    padding: 4%;
 }
 
 #stickyNav {
